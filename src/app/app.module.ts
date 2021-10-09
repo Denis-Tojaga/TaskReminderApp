@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ButtonComponent } from './components/button/button.component';
 
 
 
@@ -10,7 +12,9 @@ import { AppComponent } from './app.component';
 @NgModule({
 
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
