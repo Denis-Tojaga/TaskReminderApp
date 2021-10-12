@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from 'src/app/Task';
-import { TASKS } from "../../mock-tasks";
+import { TaskService } from 'src/app/services/task.service';
+
 
 
 @Component({
@@ -11,11 +12,16 @@ import { TASKS } from "../../mock-tasks";
 export class TasksComponent implements OnInit {
 
   //properties
-  taskList: Task[] = TASKS;
 
-  constructor() { }
+  //initialize the taskList property with an empty array for the beginning
+  taskList: Task[] = [];
+
+  //adding the TaskService as a provider in constructor declaration
+  constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
+    //taskService has access to everything that imported TaskServide has 
+    this.taskList = this.taskService.getTasks();
   }
 
 }
