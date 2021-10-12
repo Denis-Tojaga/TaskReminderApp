@@ -21,7 +21,10 @@ export class TasksComponent implements OnInit {
 
   ngOnInit(): void {
     //taskService has access to everything that imported TaskServide has 
-    this.taskList = this.taskService.getTasks();
+    //we see this subscribe method as a promise in which we pass in an arrow function that receives the responseValue and do something with it
+    this.taskService.getTasks().subscribe((responseValue) => {
+      this.taskList = responseValue;
+    });
   }
 
 }
