@@ -43,7 +43,6 @@ export class TasksComponent implements OnInit {
     //this method will trigger when the emitter onToggleReminder is activated
     //this method will only change the value of a reminder 
     task.reminder = !task.reminder;
-    console.log(task.reminder);
     this.taskService.updateTask(task).subscribe();
   }
 }

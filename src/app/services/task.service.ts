@@ -16,6 +16,8 @@ const httpOptions = {
   providedIn: 'root'
 })
 
+
+
 export class TaskService {
 
   //properties
@@ -44,7 +46,6 @@ export class TaskService {
     const url = `${this.apiURL}/${task.id}`;
     return this.http.delete<Task>(url);
   }
-
 
 
   //method that updates a task
