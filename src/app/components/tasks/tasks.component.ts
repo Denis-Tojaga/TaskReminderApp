@@ -27,4 +27,16 @@ export class TasksComponent implements OnInit {
     });
   }
 
+
+  //method that triggers when onDeleteTask event is triggered
+  deleteTask(task: Task): void {
+
+    //this will first call the method inside the service and delete the task
+    //and then the array method is going to set the taskList to a new filtered taskList 
+    this.taskService.deleteTask(task).subscribe(() => {
+      this.taskList = this.taskList.filter((item) => { return item.id != task.id });
+    });
+  }
+
+
 }
