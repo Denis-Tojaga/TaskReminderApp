@@ -3,11 +3,18 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable } from 'rxjs';
 import { Task } from 'src/app/Task';
 
+
+//we make an object that will contain mupltiple properties, those properties will define the headers request
+const httpOptions = {
+  headers: new HttpHeaders({
+    "Content-Type": "application/json"
+  })
+}
+
+
 @Injectable({
   providedIn: 'root'
 })
-
-
 
 export class TaskService {
 
@@ -31,7 +38,6 @@ export class TaskService {
   }
 
 
-
   //method for deleting specific task
   deleteTask(task: Task): Observable<Task> {
     //we add the id of a task that has to be deleted on the apiURL and pass it to the delete method
@@ -40,4 +46,10 @@ export class TaskService {
   }
 
 
+
+  //method that updates a task
+  updateTask(task: Task): Observable<Task> {
+    const url = `${this.apiURL}/${task.id}`;
+    return this.http.put<Task>(url, task, httpOptions);
+  }
 }
