@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Task } from 'src/app/Task';
 
 @Component({
   selector: 'app-add-task',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-task.component.css']
 })
 export class AddTaskComponent implements OnInit {
+
+  //we are outputing an emitter called onAddTask and its related to Task
+  @Output() onAddTask: EventEmitter<Task> = new EventEmitter();
+
 
   //form fields
   text: string;
@@ -16,6 +21,31 @@ export class AddTaskComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+
+  //method that will submit all the values currently in input fields on the form
+  onSubmit() {
+    if (this.ValidateFields()) {
+      const newTask = {
+        text: this.text,
+        day: this.day,
+        reminder: this.reminder
+      };
+
+      this.onAddTask.emit(newTask);
+
+      this.text = "";
+      this.day = "";
+      this.reminder = false;
+    }
+
+  }
+
+
+  //method for validating input fields
+  ValidateFields(): boolean {
+    return this.text.length != 0 && this.day.length != 0;
   }
 
 }

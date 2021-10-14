@@ -9,6 +9,9 @@ import { TaskService } from 'src/app/services/task.service';
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.css']
 })
+
+
+
 export class TasksComponent implements OnInit {
 
   //properties
@@ -44,5 +47,11 @@ export class TasksComponent implements OnInit {
     //this method will only change the value of a reminder 
     task.reminder = !task.reminder;
     this.taskService.updateTask(task).subscribe();
+  }
+
+
+
+  addTask(task: Task): void {
+    console.log(task);
   }
 }
