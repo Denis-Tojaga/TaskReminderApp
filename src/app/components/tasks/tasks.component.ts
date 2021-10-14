@@ -52,6 +52,9 @@ export class TasksComponent implements OnInit {
 
 
   addTask(task: Task): void {
-    console.log(task);
+    //when we add task, after subscribe method is done we will get single task, we must add that task in our array to refresh it
+    this.taskService.addTask(task).subscribe((addedItem) => {
+      this.taskList.push(addedItem)
+    });
   }
 }
