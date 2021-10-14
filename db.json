@@ -19,16 +19,16 @@
       "reminder": true
     },
     {
-      "id": 4,
-      "text": "Finish the assignment",
-      "day": "May 10th at 5:30pm",
-      "reminder": true
-    },
-    {
       "id": 5,
       "text": "Buy a new phone",
       "day": "May 13th at 9:30am",
       "reminder": false
+    },
+    {
+      "text": "new task Denis",
+      "day": "15.10.2021",
+      "reminder": true,
+      "id": 6
     }
   ]
 }

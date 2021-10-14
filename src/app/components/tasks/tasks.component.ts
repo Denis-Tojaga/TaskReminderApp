@@ -42,6 +42,7 @@ export class TasksComponent implements OnInit {
   }
 
 
+  //method that will update the reminder property on double clicked task
   toggleReminder(task: Task): void {
     //this method will trigger when the emitter onToggleReminder is activated
     //this method will only change the value of a reminder 
@@ -50,7 +51,7 @@ export class TasksComponent implements OnInit {
   }
 
 
-
+  //method that adds a new task in the collection
   addTask(task: Task): void {
     //when we add task, after subscribe method is done we will get single task, we must add that task in our array to refresh it
     this.taskService.addTask(task).subscribe((addedItem) => {
