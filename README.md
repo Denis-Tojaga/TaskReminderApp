@@ -1,11 +1,9 @@
 # TaskReminderApp
 
 #### Simple web application made with Angular. User can see his list of tasks and perform all CRUD operations with them.
-
 <br />
 
 # App startup
-
 <br />
 
 #### Download the github repository
