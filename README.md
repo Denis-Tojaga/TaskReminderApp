@@ -5,7 +5,7 @@
 <br />
 
 # App startup
-
+<br />
 #### Download the github repository
 #### Go inside that directory and run npm install
 #### Run npm start or ng serve to start the app on localhost/4200
