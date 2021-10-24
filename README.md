@@ -9,3 +9,10 @@
 #### Download the github repository
 #### Go inside that directory and run npm install
 #### Run npm start or ng serve to start the app on localhost/4200
+
+# Images
+<br />
+
+<img src="Images/img1.png" width="250" height="470">  
+<img src="Images/img2.png" width="250" height="470">      
+<img src="Images/img3.png" width="250" height="470">  
