@@ -15,4 +15,4 @@
 
 <img src="Images/img1.png" width="950" height="670">  
 <img src="Images/img2.png" width="950" height="670">      
-<img src="Images/img3.png" width="950" height="670">  
+<img src="Images/img3.png" width="650" height="670">  
